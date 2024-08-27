@@ -13,6 +13,7 @@ specifiers:
   '@vue/tsconfig': ^0.5.1
   cross-env: ^7.0.3
   cypress: ^13.12.0
+  dotenv: ^16.4.5
   electron: ^32.0.1
   eslint: ^8.57.0
   eslint-plugin-cypress: ^3.3.0
@@ -48,6 +49,7 @@ devDependencies:
   '@vue/tsconfig': 0.5.1
   cross-env: 7.0.3
   cypress: 13.13.3
+  dotenv: 16.4.5
   electron: 32.0.1
   eslint: 8.57.0
   eslint-plugin-cypress: 3.5.0_eslint@8.57.0
@@ -2203,6 +2205,11 @@ packages:
     engines: {node: '>=6.0.0'}
     dependencies:
       esutils: 2.0.3
+    dev: true
+
+  /dotenv/16.4.5:
+    resolution: {integrity: sha512-ZmdL2rui+eB2YwhsWzjInR8LldtZHGDoQ1ugH85ppHKwpUHL7j7rN0Ti9NCnGiQbhaZ11FpR+7ao1dNsmduNUg==}
+    engines: {node: '>=12'}
     dev: true
 
   /duplexer/0.1.2:

@@ -1,12 +1,17 @@
 // main.js
 
-// electron 模块可以用来控制应用的生命周期和创建原生浏览窗口
+// main 模块可以用来控制应用的生命周期和创建原生浏览窗口
 import { app, BrowserWindow } from 'electron'
 import { join, dirname } from 'path'
 import { fileURLToPath } from 'url'
+import dotenv from 'dotenv'
+
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
+dotenv.config()
+
 const isDev = process.env.IS_DEV == 'true' ? true : false
+const devServerPort = process.env.VITE_DEV_SERVER_PORT || 7173
 
 const createWindow = () => {
   // 创建浏览窗口
@@ -21,15 +26,14 @@ const createWindow = () => {
 
   // 加载 index.html
   mainWindow.loadURL(
-    isDev ? 'http://localhost:5173' : `file://${join(__dirname, '../../dist/index.html')}`
+    isDev
+      ? `http://localhost:${devServerPort}`
+      : `file://${join(__dirname, '../../dist/index.html')}`
   )
-  // Open the DevTools.
+  // 打开开发者工具
   if (isDev) {
     mainWindow.webContents.openDevTools()
   }
-
-  // 打开开发工具
-  // mainWindow.webContents.openDevTools()
 }
 
 // 这段程序将会在 Electron 结束初始化
