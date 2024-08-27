@@ -2,7 +2,9 @@
 
 // electron 模块可以用来控制应用的生命周期和创建原生浏览窗口
 import { app, BrowserWindow } from 'electron'
-import { join } from 'path'
+import { join, dirname } from 'path'
+import { fileURLToPath } from 'url'
+const __dirname = dirname(fileURLToPath(import.meta.url))
 
 const isDev = process.env.IS_DEV == 'true' ? true : false
 
@@ -19,7 +21,7 @@ const createWindow = () => {
 
   // 加载 index.html
   mainWindow.loadURL(
-    isDev ? 'http://localhost:8848' : `file://${join(__dirname, '../../dist/index.html')}`
+    isDev ? 'http://localhost:5173' : `file://${join(__dirname, '../../dist/index.html')}`
   )
   // Open the DevTools.
   if (isDev) {

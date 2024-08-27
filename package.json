@@ -5,7 +5,8 @@
   "type": "module",
   "main": "src/electron/main.js",
   "scripts": {
-    "start": "electron .",
+    "electron:dev": "cross-env IS_DEV=true electron .",
+    "electron:prop": "cross-env IS_DEV=false electron .",
     "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" --",
     "preview": "vite preview",
@@ -33,6 +34,7 @@
     "@vue/eslint-config-typescript": "^13.0.0",
     "@vue/test-utils": "^2.4.6",
     "@vue/tsconfig": "^0.5.1",
+    "cross-env": "^7.0.3",
     "cypress": "^13.12.0",
     "electron": "^32.0.1",
     "eslint": "^8.57.0",

@@ -11,6 +11,7 @@ specifiers:
   '@vue/eslint-config-typescript': ^13.0.0
   '@vue/test-utils': ^2.4.6
   '@vue/tsconfig': ^0.5.1
+  cross-env: ^7.0.3
   cypress: ^13.12.0
   electron: ^32.0.1
   eslint: ^8.57.0
@@ -45,6 +46,7 @@ devDependencies:
   '@vue/eslint-config-typescript': 13.0.0_gr64jd2l4xgzug6y6dz5yl5jqm
   '@vue/test-utils': 2.4.6
   '@vue/tsconfig': 0.5.1
+  cross-env: 7.0.3
   cypress: 13.13.3
   electron: 32.0.1
   eslint: 8.57.0
@@ -1965,6 +1967,14 @@ packages:
 
   /core-util-is/1.0.2:
     resolution: {integrity: sha512-3lqz5YjWTYnW6dlDa5TLaTCcShfar1e40rmcJVwCBJC6mWlFuj0eCHIElmG1g5kyuJ/GD+8Wn4FFCcz4gJPfaQ==}
+    dev: true
+
+  /cross-env/7.0.3:
+    resolution: {integrity: sha512-+/HKd6EgcQCJGh2PSjZuUitQBQynKor4wrFbRg4DtAgS1aWO+gU52xpH7M9ScGgXSYmAVS9bIJ8EzuaGw0oNAw==}
+    engines: {node: '>=10.14', npm: '>=6', yarn: '>=1'}
+    hasBin: true
+    dependencies:
+      cross-spawn: 7.0.3
     dev: true
 
   /cross-spawn/7.0.3:
