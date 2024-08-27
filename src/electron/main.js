@@ -19,7 +19,7 @@ const createWindow = () => {
     width: 1200,
     height: 900,
     webPreferences: {
-      preload: join(__dirname, 'preload.js'),
+      preload: join(__dirname, 'preload.cjs'),
       nodeIntegration: true
     }
   })
